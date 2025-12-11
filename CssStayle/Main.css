@@ -1,0 +1,165 @@
+* {
+     box-sizing: border-box;
+     scroll-behavior: smooth;
+}
+::selection {
+     background-color: #b6f72c;
+     color: #23272a;
+}
+body {
+     margin: 0;
+     width: 100%;
+     height: 90vh;
+     background-color: rgb(0, 0, 0);
+     color: #c8bfc7;
+}
+
+/* =============== Continer =============== */
+
+.crad-continer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin: 30px;
+     padding-right: 10px;
+     object-fit: cover;
+}
+
+/* =============== Cord =============== */
+
+.card {
+     background-color: #23272a;
+     width: 400px;
+     padding: 10px;
+     text-align: center;
+     border-radius: 20px;
+}
+
+/* =============== Image =============== */
+
+.img {
+     width: 120px;
+     height: 120px;
+     object-fit: cover;
+     border-radius: 50%;
+     margin: 10px;
+     border: 2px solid black;
+}
+
+/* =============== Name =============== */
+
+.name {
+     font-size: 30px;
+     display: block;
+}
+
+/* =============== Con =============== */
+
+.con {
+     color: #b6f72c;
+     margin-bottom: 20px;
+}
+
+/* =============== Dis =============== */
+
+.dis {
+     line-height: 30px;
+     font-size: 18px;
+}
+
+/* =============== lINKS =============== */
+
+.links {
+     display: flex;
+     flex-direction: column;
+     padding: 20px;
+     gap: 30px;
+}
+
+.link {
+     background-color: black;
+     padding: 17px;
+     border: none;
+     text-decoration: none;
+     color: white;
+     border-radius: 15px;
+     font-size: 17px;
+     transition: 0.5s;
+     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+}
+
+.link:hover {
+     border-radius: 20px;
+     transform: scale(1.1);
+     color: #b6f72c;
+}
+.link:focus {
+     border-radius: 20px;
+     transform: scale(1.1);
+     color: #b6f72c;
+}
+
+/* =============== Footer =============== */
+
+.footer {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+}
+
+span {
+     color: #b6f72c;
+}
+
+/* =============== Midia =============== */
+
+/* 1. موبايل فقط (من 0 لحد 767px) */
+@media (max-width: 767px) {
+     .crad-continer {
+          width: 95%;
+          height: 100%;
+          margin-left: 15px;
+          padding-left: 0px;
+     }
+     .img {
+          width: 90px;
+          height: 90px;
+     }
+     .link {
+          padding: 14px;
+     }
+}
+
+/* 2. تابلت فقط (من 768 لحد 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+     .crad-continer {
+          margin: 12px;
+          padding-left: 0px;
+     }
+
+     .img {
+          width: 80px;
+          height: 80px;
+     }
+}
+
+/* 3. لاب توب فقط (من 1025 لحد 1439px) */
+@media (min-width: 1025px) and (max-width: 1439px) {
+     .img {
+          width: 100px;
+          height: 100px;
+     }
+     .link,
+     .links {
+          padding: 9px;
+     }
+     .name {
+          font-size: 20px;
+     }
+     .dis {
+          font-size: 15px;
+     }
+}
