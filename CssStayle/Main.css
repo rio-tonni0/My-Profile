@@ -45,8 +45,26 @@ body {
 
 .card hr {
      margin: 0px;
+     height: 2.5px;
+     background: #b6f72c;
+     border: none;
+     position: relative;
+     display: block;
+     overflow: hidden;
 }
 
+.card hr::after {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: -2%;
+     width: 100%;
+     height: 100%;
+
+     background: linear-gradient(80deg, transparent, #cecece, transparent);
+
+     animation: shine 1.5s linear infinite;
+}
 /* =============== Name =============== */
 
 .name {
@@ -57,8 +75,17 @@ body {
 /* =============== Con =============== */
 
 .con {
-     color: #b6f72c;
      margin-bottom: 20px;
+     border: none;
+     display: block;
+     overflow: hidden;
+
+     background: linear-gradient(90deg, #b6f72c, #cecece, #b6f72c);
+     background-clip: text;
+     color: transparent;
+     background-size: 200% auto;
+
+     animation: gred 1.5s linear infinite;
 }
 
 /* =============== Dis =============== */
@@ -72,33 +99,47 @@ body {
 
 .links {
      display: flex;
+     justify-content: center;
+     align-items: center;
      flex-direction: column;
      padding: 20px;
-     gap: 30px;
+     gap: 25px;
 }
 
 .link {
+     width: 370px;
      background-color: black;
-     padding: 17px;
+     padding: 0px;
      border: none;
      text-decoration: none;
      color: white;
      border-radius: 15px;
-     font-size: 17px;
+
      transition: 0.5s;
      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
           sans-serif;
 }
 
 .link:hover {
+     transform: scale(1.03);
+     box-shadow: 0px 5px 15px #4c4c4c;
      border-radius: 20px;
-     transform: scale(1.05);
-     color: #b6f72c;
 }
-.link:focus {
-     border-radius: 20px;
-     transform: scale(1.1);
-     color: #b6f72c;
+
+.link-p {
+     padding: 17px;
+     margin: 0px;
+     color: #ffffff;
+     font-size: 18px;
+}
+
+.link-p:hover {
+     background: linear-gradient(110deg, #b6f72c, #cecece, #b6f72c);
+     background-clip: text;
+     color: transparent;
+     background-size: 200% auto;
+     animation: gred 1.5s linear infinite;
+     object-fit: contain;
 }
 
 /* =============== Footer =============== */
@@ -108,10 +149,16 @@ body {
      justify-content: center;
      align-items: center;
      text-align: center;
+     letter-spacing: 2px;
 }
 
 span {
      color: #b6f72c;
+     background: linear-gradient(90deg, #b6f72c, #cecece, #b6f72c);
+     background-clip: text;
+     color: transparent;
+     background-size: 200% auto;
+     animation: gred 1.5s linear infinite;
 }
 
 /* =============== Midia =============== */
@@ -120,15 +167,19 @@ span {
      .crad-continer {
           width: 95%;
           height: 100%;
-          margin-left: 15px;
-          padding-left: 0px;
-          padding-right: 9px;
+          margin: 15px;
+          padding-right: 10px;
      }
      .img {
           width: 400px;
      }
+     .link-p {
+          padding: 16px;
+     }
      .link {
-          padding: 14px;
+          width: 320px;
+          padding: 0px;
+          font-size: 16px;
      }
 }
 
@@ -149,14 +200,39 @@ span {
           width: 400px;
           height: 250px;
      }
+     .link-p {
+          padding: 16px;
+     }
      .link,
      .links {
-          padding: 12px;
+          padding: 0px;
+          font-size: 16px;
      }
      .name {
           font-size: 20px;
      }
      .dis {
           font-size: 15px;
+     }
+}
+
+/* =============== Keys =============== */
+
+@keyframes shine {
+     0% {
+          left: -100%;
+     }
+     100% {
+          left: 100%;
+     }
+}
+
+@keyframes gred {
+     0% {
+          background-position: 200% 50%;
+     }
+
+     100% {
+          background-position: 0% 50%;
      }
 }
